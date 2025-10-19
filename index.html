@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LiteShop — Fast Minimal E‑commerce</title>
+  <meta name="description" content="LiteShop is a blazing fast, minimalist e‑commerce template. Add products to cart, export orders, and plug in real payments later."/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230090ff'/%3E%3Ctext x='50' y='57' text-anchor='middle' font-size='44' fill='white' font-family='system-ui,Segoe UI,Roboto,Arial'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="canonical" href="https://example.com/" />
+  <meta property="og:title" content="LiteShop — Fast Minimal E‑commerce" />
+  <meta property="og:description" content="Launch a storefront in minutes. Responsive, accessible, zero‑backend." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f1220" />
+  <link rel="preload" href="app.js" as="script" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>window.analytics = { track:(e,d)=>{ try{ console.log('[analytics]', e, d||{});}catch(_e){} } };</script>
+  <script type="application/ld+json" id="schema-products">{}</script>
+</head>
+<body>
+  <a class="skip" href="#products">Skip to products</a>
+  <header class="container header" role="banner">
+    <div class="brand" aria-label="LiteShop brand">
+      <span class="logo" aria-hidden="true">🛍️</span>
+      <span>LiteShop</span>
+    </div>
+    <nav class="nav" role="navigation" aria-label="Main">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="cartBtn" class="btn cart-btn" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">🛒 <span id="cartCount" aria-live="polite">0</span></button>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Launch Your Store in Minutes</h1>
+      <p>Responsive, fast, and zero‑backend. Add to cart, manage orders locally, and connect real payments later.</p>
+      <a href="#products" class="btn primary">Start Shopping</a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="blob"></div>
+      <div class="card">
+        <div class="img ph">IMG</div>
+        <div class="line"></div>
+        <div class="line w50"></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section aria-labelledby="products-title" id="products">
+      <div class="toolbar">
+        <h2 id="products-title">Featured Products</h2>
+        <div class="filters">
+          <input id="search" type="search" placeholder="Search products…" aria-label="Search products">
+          <select id="sort" aria-label="Sort">
+            <option value="pop">Sort: Popular</option>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+            <option value="az">Name: A → Z</option>
+          </select>
+        </div>
+      </div>
+      <div id="grid" class="grid" role="list"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>LiteShop is a static storefront template. Deploy to Vercel/Netlify/GitHub Pages and connect Stripe Payment Links or a serverless checkout later.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: hello@example.com</li>
+        <li>Phone: +1 (555) 123-4567</li>
+        <li>Address: 123 Main St, New York, NY</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> LiteShop</div>
+    <div class="muted">Demo store — no payments processed.</div>
+  </footer>
+
+  <aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true" tabindex="-1">
+    <div class="drawer-header">
+      <h3 id="cartTitle">Cart</h3>
+      <button id="closeDrawer" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartList" class="drawer-body"></div>
+    <div class="drawer-footer">
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <strong id="subtotal">$0.00</strong>
+      </div>
+      <button id="checkout" class="btn primary">Checkout</button>
+      <button id="clearCart" class="btn ghost">Clear</button>
+      <a id="paylink" class="btn ghost" href="#" target="_blank" rel="noopener">Pay via Stripe Link</a>
+    </div>
+  </aside>
+  <div id="backdrop" class="backdrop" aria-hidden="true"></div>
+
+  <script>
+    window.__PRODUCTS__ = [
+      {id:"bag-01", title:"Vacuum Storage Bag (Large)", price:12.99, img:"#7db3ff", badge:"Hot", popularity:90, sku:"LS-BAG-L", brand:"LiteHome", availability:"InStock"},
+      {id:"bag-02", title:"Vacuum Storage Bag (Medium)", price:9.99, img:"#9be58c", badge:"New", popularity:70, sku:"LS-BAG-M", brand:"LiteHome", availability:"InStock"},
+      {id:"pump-01", title:"Manual Pump", price:8.49, img:"#ffd76b", popularity:65, sku:"LS-PUMP-MAN", brand:"LiteHome", availability:"InStock"},
+      {id:"pump-02", title:"Electric Pump", price:24.90, img:"#f7a8a8", badge:"-10%", popularity:95, sku:"LS-PUMP-ELC", brand:"LiteHome", availability:"InStock"},
+      {id:"set-01", title:"10‑Pack Storage Bags", price:39.00, img:"#b4a3ff", popularity:88, sku:"LS-SET-10", brand:"LiteHome", availability:"InStock"},
+      {id:"set-02", title:"Family Pack (20 Bags + Pump)", price:62.00, img:"#ffccdd", badge:"Best Value", popularity:99, sku:"LS-SET-20", brand:"LiteHome", availability:"InStock"}
+    ];
+  </script>
+  <script defer src="app.js"></script>
+  <script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js').catch(()=>{}); }</script>
+</body>
+</html>
