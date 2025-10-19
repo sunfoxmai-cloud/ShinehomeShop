@@ -1,1 +1,16 @@
-{"name": "LiteShop", "short_name": "LiteShop", "start_url": ".", "display": "standalone", "background_color": "#0f1220", "theme_color": "#0f1220", "icons": [{"src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAACqN7WfAAAAI0lEQVR4Ae3BAQ0AAAzCsOHfNGEQAAAAAAAAAAAAAAAAAAAAgO8B9TQAAZZ4mCkAAAAASUVORK5CYII=", "sizes": "128x128", "type": "image/png"}]}
+{
+  "name": "LiteShop",
+  "short_name": "LiteShop",
+  "start_url": "/ShinehomeShop/",
+  "scope": "/ShinehomeShop/",
+  "display": "standalone",
+  "background_color": "#0f1220",
+  "theme_color": "#0f1220",
+  "icons": [
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAACqN7WfAAAAI0lEQVR4Ae3BAQ0AAAzCsOHfNGEQAAAAAAAAAAAAAAAAAAAAgO8B9TQAAZZ4mCkAAAAASUVORK5CYII=",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}
