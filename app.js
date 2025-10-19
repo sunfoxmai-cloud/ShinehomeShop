@@ -195,5 +195,14 @@ function init(){
   updateBadges();
   attachGlobalHandlers();
   window.analytics.track('page_view');
+
+  // ...已有初始化代码...https://buy.stripe.com/7sY7sKbfo2MF1te1vj48000
+  document.getElementById("paylink").href =
+    "https://buy.stripe.com/7sY7sKbfo2MF1te1vj48000";
+
+  document.getElementById("checkout").style.display = "none";
+
 }
 document.addEventListener("DOMContentLoaded", init);
+
+
