@@ -124,6 +124,12 @@
       {id:"set-02", title:"Family Pack (20 Bags + Pump)", price:62.00, img:"#ffccdd", badge:"Best Value", popularity:99, sku:"LS-SET-20", brand:"LiteHome", availability:"InStock"}
     ];
   </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+      navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
+    }
+  </script>
   <script defer src="app.js"></script>
   <script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js').catch(()=>{}); }</script>
 </body>
