@@ -21,7 +21,9 @@
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#0f1220" />
   <link rel="preload" href="app.js" as="script" />
-  <link rel="stylesheet" href="styles.css" />
+  <!-- <link rel="stylesheet" href="styles.css" /> v=num 每次发布改这个数字，用户浏览器那边就新访问时刷新缓存 -->
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <script defer src="app.js?v=4"></script>
 
   <script>window.analytics = { track:(e,d)=>{ try{ console.log('[analytics]', e, d||{});}catch(_e){} } };</script>
   <script type="application/ld+json" id="schema-products">{}</script>
